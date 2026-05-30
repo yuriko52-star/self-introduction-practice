@@ -10,10 +10,10 @@
 <body>
     <h1>自己紹介</h1>
     <h2>プロフィール</h2>
-    <p>名前</p>
-    <p>年齢</p>
-    <p>出身地</p>
-    <p>趣味</p>
+    <p>名前: 石黒ゆりこ</p>
+    <p>年齢: 54歳</p>
+    <p>出身地: 愛知県</p>
+    <p>趣味:　読書、お菓子作り</p>
     <h2>好きなもの</h2>
     <ul>
         <li>お菓子</li>
@@ -27,26 +27,33 @@
         <li>毎日楽しく過ごす</li>
     </ol>
     <h2>リンク</h2>
-    <a href="https://github.com/yuriko52-star/kakeibo-app" target="_blank">私のGitHub</a>
+    <a href="https://github.com/yuriko52-star" target="_blank">私のGitHub</a>
     <h2>好きな風景</h2>
-    <img src="landscape.jpg" alt="好きな風景" width="400px">
+    <img src="landscape.jpg" alt="好きな風景" width="400">
     <h2>お問い合わせ</h2>
 
-    <form action="submit" method="POST">
-        <label>お名前:</label>
-        <input type="text" name="name" required> <br>
-        <label>お問合せ種別:</label>
-        <select name="contacts" id="">
-            <option value="">選んでください</option>
-            <option value="general-contact">一般的なお問い合わせ</option>
-            <option value="require">ご意見・ご要望</option>
-        </select> <br>
-        <label>お問い合わせ内容:</label>
-        <textarea name="content" id="" required></textarea> <br>
-
-        <button type="submit">送信</button>
+    <form action="/submit" method="POST">
+        <div>
+            <label for="contact-name">お名前:</label>
+            <input type="text" id="contact-name" name="name" required>
+        </div>
+        <div>
+            <label for="contact-category">お問合せ種別:</label>
+            <select name="category" id="contact-caegory">
+                <option value="">--選んでください--</option>
+                <option value="general">一般的なお問い合わせ</option>
+                <option value="feedback">ご意見・ご要望</option>
+            </select>
+        </div>
+        <div>
+            <label for="contact-message">お問い合わせ内容:</label>
+            <textarea name="message" id="contact-message" rows="5" required></textarea>
+        </div>
+        <div>
+            <button type="submit">送信</button>
+        </div>
     </form>
-    </div>
+   
 </body>
 
 </html>
